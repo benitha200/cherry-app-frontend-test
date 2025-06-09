@@ -7,9 +7,22 @@ on:
       - develop
     tags:
       - 'v*'
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package*.json'
+      - 'vite.config.js'
+      - 'Dockerfile'
+      - '.github/workflows/frontend-docker.yml'
   pull_request:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package*.json'
+      - 'vite.config.js'
+      - 'Dockerfile'
 
 env:
   DOCKER_IMAGE: iyuyisenga/cherry-app-frontend-test
@@ -52,6 +65,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
+        context: .
         platforms: linux/amd64,linux/arm64
         push: true
         tags: ${{ steps.meta.outputs.tags }}
