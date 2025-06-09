@@ -1,0 +1,43 @@
+{
+  "name": "cherrypurchase-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@tailwindcss/cli": "^4.0.3",
+    "@tailwindcss/postcss": "^4.0.3",
+    "@tanstack/react-query": "^5.67.1",
+    "@tanstack/react-query-devtools": "^5.67.1",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "lucide-react": "^0.510.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.9",
+    "react-datepicker": "^8.1.0",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.5.2",
+    "react-router-dom": "^7.1.5",
+    "recharts": "^2.15.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vite-plugin-checker": "^0.8.0"
+  }
+}
