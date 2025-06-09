@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import API_URL from "../constants/Constants";
+import API_URL from "../constants/Constants.jsx";
 
 // Consistent theme colors
 const theme = {
