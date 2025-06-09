@@ -6,9 +6,6 @@ export default defineConfig({
     react(),
   ],
   base:'/',
-  resolve: {
-    extensions: ['.jsx','.js',  '.ts', '.tsx', '.json'],
-  },
   build: {
     rollupOptions: {
       output: {
