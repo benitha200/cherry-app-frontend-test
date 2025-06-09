@@ -7,7 +7,7 @@ export default defineConfig({
   ],
   base:'/',
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    extensions: ['.jsx','.js',  '.ts', '.tsx', '.json'],
   },
   build: {
     rollupOptions: {
