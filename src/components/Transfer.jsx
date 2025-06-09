@@ -14,7 +14,7 @@ import {
   Nav,
   Tab,
 } from "react-bootstrap";
-import API_URL from "../constants/Constants";
+import API_URL from "../constants/Constants.jsx";
 import toast from "react-hot-toast";
 
 const processingTheme = {
@@ -1464,7 +1464,7 @@ export default Transfer;
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 // import { Card, Button, Modal, Placeholder, Form, Alert, InputGroup, Badge, Row, Col, Nav, Tab } from 'react-bootstrap';
-// import API_URL from '../constants/Constants';
+// import API_URL from '../constants/Constants.jsx';
 
 // const processingTheme = {
 //   primary: '#008080',    // Sucafina teal

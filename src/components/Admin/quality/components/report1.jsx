@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Form, Row, Col, Card, InputGroup, Placeholder } from "react-bootstrap";
-import { loggedInUser } from "../../../../utils/loggedInUser";
+import { loggedInUser } from "../../../../utils/loggedInUser.js";
 import { useNavigate } from "react-router-dom";
-import GenericModal from "./model";
+import GenericModal from "./model.jsx";
 import {
   getQualityBatchesInTesting,
   updateQualityInformationOnDelivary,
-} from "../../../../apis/quality";
-import { Error, Success } from "./responses";
-import { Pagination } from "./paginations";
-import { sampleStorage as storage } from "../../../../apis/sampleStorage";
-import { getDelivary } from "../../../../apis/delivaryCapping";
+} from "../../../../apis/quality.js";
+import { Error, Success } from "./responses.jsx";
+import { Pagination } from "./paginations.jsx";
+import { sampleStorage as storage } from "../../../../apis/sampleStorage.js";
+import { getDelivary } from "../../../../apis/delivaryCapping.js";
 
 const processingTheme = {
   primary: "#008080", // Sucafina teal

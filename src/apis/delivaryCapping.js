@@ -1,5 +1,5 @@
 import axios from "axios";
-import API_URL from "../constants/Constants";
+import API_URL from "../constants/Constants.jsx";
 import { loggedInUser } from "../utils/loggedInUser";
 
 export const getDelivaries = async (page, limit) => {

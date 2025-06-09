@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
-// import API_URL from '../constants/Constants';
+// import API_URL from '../constants/Constants.jsx';
 
 // const SiteCollectionForm = () => {
 //   const navigate = useNavigate();
@@ -150,7 +150,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import API_URL from '../constants/Constants';
+import API_URL from '../constants/Constants.jsx';
 
 const SiteCollectionForm = () => {
   const navigate = useNavigate();

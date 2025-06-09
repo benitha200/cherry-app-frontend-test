@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import ReusableTable from "../../../../../sharedCompoents/reusableTable";
-import { Pagination } from "../../../../../sharedCompoents/paginations";
-import { GetAllDelivaries, UpdateDelivary } from "../actions";
-import { GenericModel } from "../../../../../sharedCompoents/genericModel";
-import { QuantityReceived } from "./quantityReceived";
-import { ProcessedBatches } from "./proccesedBatches";
-import { Error, Success } from "../../components/responses";
-import { DeliveryTableSkeleton } from "./skeleton";
-import { formatDate } from "../../../../../utils/formatDate";
+import ReusableTable from "../../../../../sharedCompoents/reusableTable.jsx";
+import { Pagination } from "../../../../../sharedCompoents/paginations.jsx";
+import { GetAllDelivaries, UpdateDelivary } from "../actions.js";
+import { GenericModel } from "../../../../../sharedCompoents/genericModel.jsx";
+import { QuantityReceived } from "./quantityReceived.jsx";
+import { ProcessedBatches } from "./proccesedBatches.jsx";
+import { Error, Success } from "../../components/responses.jsx";
+import { DeliveryTableSkeleton } from "./skeleton.jsx";
+import { formatDate } from "../../../../../utils/formatDate.js";
 
 export const DerivalyTable = () => {
   // State declarations

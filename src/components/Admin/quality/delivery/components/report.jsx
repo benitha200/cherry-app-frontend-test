@@ -8,8 +8,8 @@ import {
   Placeholder,
   Button,
 } from "react-bootstrap";
-import { Pagination } from "../../../../../sharedCompoents/paginations";
-import { SubTableHeading } from "./subTableHeading";
+import { Pagination } from "../../../../../sharedCompoents/paginations.jsx";
+import { SubTableHeading } from "./subTableHeading.jsx";
 const theme = {
   primary: "#008080", // Sucafina teal
   secondary: "#4FB3B3", // Lighter teal

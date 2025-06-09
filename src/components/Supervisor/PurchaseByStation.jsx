@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
-import API_URL from "../../constants/Constants";
+import API_URL from "../../constants/Constants.jsx";
 import { Button } from "react-bootstrap";
 
 const theme = {

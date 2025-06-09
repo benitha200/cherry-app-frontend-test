@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Form, Row, Col, Card, InputGroup } from "react-bootstrap";
-import { SubTableHeading } from "./subTableHeading";
-import { SubBatchTable } from "./subBatchTable";
-import { GetDelivaryById, GetSampleStorage } from "../actions";
-import { DelivarySkeleton } from "./dskeleton";
-import { Error } from "../../components/responses";
+import { SubTableHeading } from "./subTableHeading.jsx";
+import { SubBatchTable } from "./subBatchTable.jsx";
+import { GetDelivaryById, GetSampleStorage } from "../actions.js";
+import { DelivarySkeleton } from "./dskeleton.jsx";
+import { Error } from "../../components/responses.jsx";
 
 const processingTheme = {
   primary: "#008080", // Sucafina teal

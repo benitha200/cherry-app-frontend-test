@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Row, Col, Card, InputGroup, Placeholder } from "react-bootstrap";
-import API_URL from "../../../../constants/Constants";
-import { loggedInUser } from "../../../../utils/loggedInUser";
-import { FormSelection } from "../sample/components/formSelections";
+import API_URL from "../../../../constants/Constants.jsx";
+import { loggedInUser } from "../../../../utils/loggedInUser.js";
+import { FormSelection } from "../sample/components/formSelections.jsx";
 import { useNavigate } from "react-router-dom";
-import { getHighgrades } from "../../../../apis/quality";
-import { Pagination } from "./paginations";
+import { getHighgrades } from "../../../../apis/quality.js";
+import { Pagination } from "./paginations.jsx";
 
 const processingTheme = {
   // Base colors

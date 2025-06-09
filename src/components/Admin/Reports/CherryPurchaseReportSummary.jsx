@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import API_URL from '../../../constants/Constants';
+import API_URL from '../../../constants/Constants.jsx';
 // import API_URL from '../../../constants/Constants';
 
 const theme = {

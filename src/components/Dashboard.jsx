@@ -8,8 +8,8 @@ import {
   ResponsiveContainer 
 } from 'recharts';
 import axios from 'axios';
-import API_URL from '../constants/Constants';
-import PurchasesDashboardSkeleton from './PurchaseDashboardSkeleton';
+import API_URL from '../constants/Constants.jsx';
+import PurchasesDashboardSkeleton from './PurchaseDashboardSkeleton.jsx';
 
 // Custom theme colors that complement Sucafina teal (#008080)
 const theme = {

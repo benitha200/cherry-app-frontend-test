@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Form, Row, Col, Card, InputGroup, Placeholder } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { loggedInUser } from "../../../../../utils/loggedInUser";
-import ReusableTable from "../../../../../sharedCompoents/reusableTable";
-import { Pagination } from "../../../../../sharedCompoents/paginations";
-import { FindAllDelivaries } from "../actions";
-import { DelivarySkeleton } from "./skeleton";
-import { GenericModel } from "../../../../../sharedCompoents/genericModel";
-import { EditDelivary } from "./EditForm";
+import { loggedInUser } from "../../../../../utils/loggedInUser.js";
+import ReusableTable from "../../../../../sharedCompoents/reusableTable.jsx";
+import { Pagination } from "../../../../../sharedCompoents/paginations.jsx";
+import { FindAllDelivaries } from "../actions.js";
+import { DelivarySkeleton } from "./skeleton.jsx";
+import { GenericModel } from "../../../../../sharedCompoents/genericModel.jsx";
+import { EditDelivary } from "./EditForm.jsx";
 
 const processingTheme = {
   primary: "#008080", // Sucafina teal

@@ -5,7 +5,7 @@ import {
   getDelivaryById,
   updateDelivaryById,
 } from "../../../../apis/delivaryCapping";
-import { sampleStorage } from "../../../../apis/sampleStorage";
+import { sampleStorage } from "../../../../apis/sampleStorage.js";
 import toast from "react-hot-toast";
 
 

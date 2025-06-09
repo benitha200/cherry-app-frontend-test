@@ -12,9 +12,9 @@ import {
   Table,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import API_URL from "../constants/Constants";
-import ConfirmationModal from "./CwsManager/ConfirmationModal";
-import AlertModal from "./CwsManager/AlertModal";
+import API_URL from "../constants/Constants.jsx";
+import ConfirmationModal from "./CwsManager/ConfirmationModal.jsx";
+import AlertModal from "./CwsManager/AlertModal.jsx";
 
 const processingTheme = {
   primary: "#008080", // Sucafina teal

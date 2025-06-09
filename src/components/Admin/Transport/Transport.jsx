@@ -485,7 +485,7 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import axios from "axios";
-import API_URL from "../../../constants/Constants";
+import API_URL from "../../../constants/Constants.jsx";
 import { Bar, Pie } from "recharts";
 
 const processingTheme = {

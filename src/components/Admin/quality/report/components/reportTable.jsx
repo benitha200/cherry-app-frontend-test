@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { columns } from "./reportColums";
+import { columns } from "./reportColums.jsx";
 import { Card, Form, InputGroup } from "react-bootstrap";
-import { GetReport } from "../action";
-import { Skeleton } from "./skeleton";
-import { Error } from "../../components/responses";
-import { ReprotTable } from "./reportRows";
-import { DashboardCard } from "./dashboardCard";
-import { formatNumberWithCommas } from "../../../../../utils/formatNumberWithComma";
+import { GetReport } from "../action.js";
+import { Skeleton } from "./skeleton.jsx";
+import { Error } from "../../components/responses.jsx";
+import { ReprotTable } from "./reportRows.jsx";
+import { DashboardCard } from "./dashboardCard.jsx";
+import { formatNumberWithCommas } from "../../../../../utils/formatNumberWithComma.js";
 
 export const QualityReportTable = () => {
   const [itemsPerPage, setItemsPerPage] = useState(5);

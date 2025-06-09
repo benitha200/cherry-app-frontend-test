@@ -1,5 +1,5 @@
-import { DerivalyTable } from "./components/report";
-import { DelivarySkeleton } from "./components/skeleton";
+import { DerivalyTable } from "./components/report.jsx";
+import { DelivarySkeleton } from "./components/skeleton.jsx";
 
 export default function Delivery() {
   return (

@@ -3,8 +3,8 @@ import { columns } from "./reportColums";
 import { Card } from "react-bootstrap";
 import { GetReport } from "../action";
 import { Skeleton } from "./skeleton";
-import { Error } from "../../components/responses";
-import { ReprotTable } from "./reportRows copy";
+import { Error } from "../../components/responses.jsx";
+import { ReprotTable } from "./reportRows copy.jsx";
 
 export const QualityReportTable = () => {
   const [itemsPerPage, setItemsPerPage] = useState(5);

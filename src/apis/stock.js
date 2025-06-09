@@ -1,6 +1,6 @@
 import axios from "axios";
 import { loggedInUser } from "../utils/loggedInUser";
-import API_URL from "../constants/Constants";
+import API_URL from "../constants/Constants.jsx";
 
 export const getAllStocksInfo = async () => {
   const loggedinuser = loggedInUser();

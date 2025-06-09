@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Modal, Button, Form, Row, Col, Card, Tab, Tabs, Placeholder, Table } from 'react-bootstrap';
-import API_URL from '../constants/Constants';
+import API_URL from '../constants/Constants.jsx';
 
 const processingTheme = {
     primary: '#008080',    // Sucafina teal

@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
-import { getDelivary } from "../../../../apis/delivaryCapping";
+import { getDelivary } from "../../../../apis/delivaryCapping.js";
 
 // export const CreatePost = () => {
 //   const queryClient = useQueryClient();

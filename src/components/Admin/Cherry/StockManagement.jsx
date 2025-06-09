@@ -14,11 +14,11 @@ import {
   LineChart,
   Line,
 } from "recharts";
-import API_URL from "../../../constants/Constants";
-import StockDashboardSkeleton from "./StockDashboardSkeleton";
-import { FindAllStockInformation } from "./actions";
+import API_URL from "../../../constants/Constants.jsx";
+import StockDashboardSkeleton from "./StockDashboardSkeleton.jsx";
+import { FindAllStockInformation } from "./actions.js";
 import { data } from "react-router-dom";
-import { formatNumberWithCommas } from "../../../utils/formatNumberWithComma";
+import { formatNumberWithCommas } from "../../../utils/formatNumberWithComma.js";
 
 const theme = {
   primary: "#008080", // Sucafina teal

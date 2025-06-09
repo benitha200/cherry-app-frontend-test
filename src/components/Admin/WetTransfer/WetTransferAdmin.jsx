@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Button, Modal, Placeholder, Form, Alert, InputGroup, Badge, Pagination, Dropdown, Row, Col } from 'react-bootstrap';
-import API_URL from '../../../constants/Constants';
+import API_URL from '../../../constants/Constants.jsx';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 // import * as XLSX from 'xlsx';

@@ -1,5 +1,5 @@
-import { ReportsHeading } from "../../../sharedCompoents/heading";
-import ShortSummary from "./components/report";
+import { ReportsHeading } from "../../../sharedCompoents/heading.jsx";
+import ShortSummary from "./components/report.jsx";
 
 const Quality = () => (
   <>

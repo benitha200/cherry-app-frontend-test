@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Table, Badge } from 'react-bootstrap';
-import API_URL from '../constants/Constants';
+import API_URL from '../constants/Constants.jsx';
 
 const BaggingOffList = () => {
   const [baggingOffRecords, setBaggingOffRecords] = useState([]);

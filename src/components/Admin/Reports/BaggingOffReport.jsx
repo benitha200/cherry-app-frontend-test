@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import API_URL from "../../../constants/Constants";
-import BaggingOffDetailModal from "./BaggingOffDetailModal";
+import API_URL from "../../../constants/Constants.jsx";
+import BaggingOffDetailModal from "./BaggingOffDetailModal.jsx";
 
 const theme = {
   primary: "#008080",

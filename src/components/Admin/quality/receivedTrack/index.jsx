@@ -1,5 +1,5 @@
-import { DerivalyTable } from "./components/report";
-import { ReportsHeading } from "../../../../sharedCompoents/heading";
+import { DerivalyTable } from "./components/report.jsx";
+import { ReportsHeading } from "../../../../sharedCompoents/heading.jsx";
 
 export default function DeliveryTracks() {
   return (

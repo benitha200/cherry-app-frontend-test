@@ -1,5 +1,5 @@
 import { Form, Row, Col, Card, InputGroup } from "react-bootstrap";
-import { formatDate } from "./../../../../../utils/formatDate";
+import { formatDate } from "./../../../../../utils/formatDate.js";
 const processingTheme = {
   primary: "#008080",
   secondary: "#4FB3B3",

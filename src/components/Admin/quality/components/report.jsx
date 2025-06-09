@@ -9,17 +9,17 @@ import {
   Dropdown,
   Button,
 } from "react-bootstrap";
-import { loggedInUser } from "../../../../utils/loggedInUser";
+import { loggedInUser } from "../../../../utils/loggedInUser.js";
 import { useNavigate } from "react-router-dom";
-import GenericModal from "./model";
+import GenericModal from "./model.jsx";
 import {
   getQualityBatchesInTesting,
   updateQualityInformation,
-} from "../../../../apis/quality";
-import { Error, Success } from "./responses";
-import { Pagination } from "./paginations";
-import { sampleStorage as storage } from "../../../../apis/sampleStorage";
-import { GenericModel } from "../../../../sharedCompoents/genericModel";
+} from "../../../../apis/quality.js";
+import { Error, Success } from "./responses.jsx";
+import { Pagination } from "./paginations.jsx";
+import { sampleStorage as storage } from "../../../../apis/sampleStorage.js";
+import { GenericModel } from "../../../../sharedCompoents/genericModel.jsx";
 
 const processingTheme = {
   primary: "#008080", // Sucafina teal

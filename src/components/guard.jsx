@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getMe } from "../apis/users";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
-import LoadingPage from "../sharedCompoents/loadingpage";
+import LoadingPage from "../sharedCompoents/loadingpage.jsx";
 
 const RequireAuth = ({ allowedRoles }) => {
   const location = useLocation();

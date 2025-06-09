@@ -1,7 +1,7 @@
 import { useState } from "react";
-import GenericModal from "../../components/model";
+import GenericModal from "../../components/model.jsx";
 import { Alert } from "react-bootstrap";
-import { createMoistureContent } from "../../../../../apis/quality";
+import { createMoistureContent } from "../../../../../apis/quality.js";
 
 export const FormSelection = ({
   selectedBatchId,
