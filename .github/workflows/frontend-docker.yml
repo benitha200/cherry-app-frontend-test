@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
     tags:
       - 'v*'
     paths:
@@ -31,7 +30,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     environment: DOCKER_IMAGE
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -45,22 +44,35 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    - name: Get latest version tag and increment
+      id: get_version
+      run: |
+        git fetch --tags
+        latest_tag=$(git tag --sort=-v:refname | grep '^v' | head -n 1)
+
+        if [[ -z "$latest_tag" ]]; then
+          new_tag="v0.0.1"
+        else
+          IFS='.' read -r major minor patch <<< "${latest_tag#v}"
+          patch=$((patch + 1))
+          new_tag="v${major}.${minor}.${patch}"
+        fi
+
+        echo "Latest tag: $latest_tag"
+        echo "New tag: $new_tag"
+        echo "tag=$new_tag" >> $GITHUB_OUTPUT
+
     - name: Extract metadata
       id: meta
       uses: docker/metadata-action@v5
       with:
         images: ${{ env.DOCKER_IMAGE }}
         tags: |
-          # Branch event
           type=ref,event=branch
-          # Tag event
           type=ref,event=tag
-          # PR event
           type=ref,event=pr
-          # Default latest for main branch
           type=raw,value=latest,enable={{is_default_branch}}
-          # Custom version tag
-          type=raw,value=v1.0.1
+          type=raw,value=${{ steps.get_version.outputs.tag }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
@@ -75,3 +87,11 @@ jobs:
 
     - name: Image digest
       run: echo ${{ steps.build-and-push.outputs.digest }}
+
+    - name: Create Git tag
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git tag ${{ steps.get_version.outputs.tag }}
+        git push origin ${{ steps.get_version.outputs.tag }}
