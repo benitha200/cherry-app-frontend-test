@@ -11,6 +11,8 @@ RUN npm install
 
 COPY . .
 
+RUN ls ./constants
+
 RUN npm run build
 
 EXPOSE 5173
