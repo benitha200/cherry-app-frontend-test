@@ -138,6 +138,9 @@ jobs:
             type=ref,event=pr
             type=raw,value=latest,enable={{is_default_branch}}
 
+      - name: Create placeholder .env file
+        run: touch .env 
+      
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
