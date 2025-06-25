@@ -158,8 +158,10 @@ jobs:
             TAG="${GITHUB_REF_NAME:-${GITHUB_REF#refs/tags/}}"
             VALUES_FILE="samplecharts/charts/cherryapp-chart/values.yaml"
             echo "Updating frontend image tag to ${TAG} in ${VALUES_FILE}"
-            sed -i "s|^\(\s*tag:\s*\).*|\1${TAG}|" "$VALUES_FILE"
+            # Update only the second occurrence of 'tag:'
+            sed -i '0,/tag:/!{0,/tag:/s/tag:.*/tag: '"${TAG}"'/}' "$VALUES_FILE"
             cat "$VALUES_FILE"
+
     
       - name: Commit and push updated values.yaml
         working-directory: samplecharts
