@@ -149,38 +149,25 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Clone samplecharts repo
+      - name: Clone samplecharts repo with token
         run: |
-          git clone https://x-access-token:${{ secrets.SAMPLECHARTS_PAT }}@github.com/${{ env.SAMPLECHARTS_REPO }}.git
-
+            git clone https://x-access-token:${{ secrets.SAMPLECHARTS_PAT }}@github.com/benitha200/samplecharts.git
+    
       - name: Update frontend image tag in samplecharts values.yaml
         run: |
-          TAG="${GITHUB_REF_NAME:-${GITHUB_REF#refs/tags/}}"
-          VALUES_FILE="samplecharts/${{ env.SAMPLECHARTS_PATH }}"
-          echo "Updating frontend image tag to ${TAG} in ${VALUES_FILE}"
-          
-          # Update the second occurrence of 'tag:' only
-          awk -v new_tag="${TAG}" '
-          BEGIN { count=0 }
-          {
-            if ($0 ~ /^[[:space:]]*tag:[[:space:]]*/) {
-              count++
-              if (count == 2) {
-                sub(/tag:[[:space:]]*.*/, "tag: " new_tag)
-              }
-            }
-            print
-          }
-          ' "$VALUES_FILE" > tmp.yaml && mv tmp.yaml "$VALUES_FILE"
-
-          cat "$VALUES_FILE"
-
+            TAG="${GITHUB_REF_NAME:-${GITHUB_REF#refs/tags/}}"
+            VALUES_FILE="samplecharts/charts/cherryapp-chart/values.yaml"
+            echo "Updating frontend image tag to ${TAG} in ${VALUES_FILE}"
+            sed -i "s|^\(\s*tag:\s*\).*|\1${TAG}|" "$VALUES_FILE"
+            cat "$VALUES_FILE"
+    
       - name: Commit and push updated values.yaml
         working-directory: samplecharts
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add ${{ env.SAMPLECHARTS_PATH }}
-          git commit -m "Update frontend image tag to ${GITHUB_REF_NAME}"
-          git push origin main
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git add charts/cherryapp-chart/values.yaml
+            git commit -m "Update frontend image tag to ${GITHUB_REF_NAME}"
+            git push origin main
+
 
