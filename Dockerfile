@@ -24,7 +24,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-# Inject build-time API_URL
+# Build-time default (can be overridden)
 ARG API_URL=http://localhost:3000/api
 ENV VITE_API_URL=$API_URL
 
@@ -34,9 +34,12 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/public ./public
 
-# Only copy runtime script (remove .env copy)
-COPY runtime-env.js .  
+# Generate runtime config
+COPY runtime-env.js .
+RUN node runtime-env.js
 
 EXPOSE 5173
-CMD ["sh", "-c", "node runtime-env.js && npx vite preview --host 0.0.0.0 --port 5173"]
+CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "5173"]
+

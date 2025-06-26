@@ -1,10 +1,10 @@
-// runtime-env.js
 const fs = require('fs');
 const path = require('path');
 
-const envConfig = Object.entries(process.env)
-  .filter(([key]) => key.startsWith('VITE_'))
-  .map(([key, val]) => `VITE_${key}=${val}`)
-  .join('\n');
+const envConfig = `
+window.env = {
+  API_URL: "${process.env.VITE_API_URL || 'http://localhost:3000/api'}"
+};
+`;
 
-fs.writeFileSync(path.join(__dirname, '.env'), envConfig);
+fs.writeFileSync(path.join(__dirname, 'public', 'env-config.js'), envConfig);
